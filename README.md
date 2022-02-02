@@ -1,24 +1,13 @@
-# vue-client
+## Vue Client For Medium Clone [Inspired by](https://codebase.show/projects/realworld?category=frontend)
 
-## Project setup
-```
-npm install
-```
+---
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### Features Under Implementation
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Authentication with User Stories for Existing User Login / New User Register
+- CRUD stories for articles
+- Commenting acticles feature
+- Follow/Unfollow Authors
+- Like / Dislike single articles usecase
+- Separate Subscriptions Feed and Main Articles Feed
+- .... more
