@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav-bar></nav-bar>
+    <router-view v-slot="{Component}">
+      <transition name="animate_route" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavBar from './components/shared/NavBar.vue'
 export default {
+  components: {NavBar},
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* route transition */
+.animate_route-enter-from {
+  opacity: 0;
+}
+
+.animate_route-enter-active {
+  transition: all 0.3s ease-in;
+}
+
+.animate_route-leave-to {
+  opacity: 0;
 }
 </style>
